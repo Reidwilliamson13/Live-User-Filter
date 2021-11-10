@@ -1,0 +1,22 @@
+{
+  "name": "jsonserver",
+  "version": "1.0.0",
+  "description": "fake REST API for project 1",
+  "main": "index.js",
+  "scripts": {
+    "json:server": "json-server --watch db.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Reidwilliamson13/Real-Estate-Finder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Reidwilliamson13/Real-Estate-Finder/issues"
+  },
+  "homepage": "https://github.com/Reidwilliamson13/Real-Estate-Finder#readme",
+  "dependencies": {
+    "json-server": "^0.17.0"
+  }
+}
