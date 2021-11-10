@@ -1,3 +1,5 @@
+const messagebanner = document.querySelector("#message-banner");
+
 // Variables for main inputter section //
 const searchInput = document.querySelector("#school-search-input");
 const websiteAutopopulateBox = document.querySelector("#website-autopopulate");
@@ -26,3 +28,54 @@ const safety3 = document.querySelector("#safety3");
 const classSize3 = document.querySelector("#class-size3");
 const hrsFromHome3 = document.querySelector("#hours-from-home3");
 const website3 = document.querySelector("#college-website3");
+
+const handleErrorDisplay = (error) => {
+  messagebanner.classList.add("alert");
+  messagebanner.textContent = error;
+  messagebanner.classList.remove("hide");
+  setTimeout(() => {
+    messagebanner.classList.remove("alert");
+    messagebanner.classList.add("hide");
+  }, 5000);
+};
+
+const returnNone = () => {};
+// Creating 3 ranked cards for populated university, safety, class size, etc.
+const makeUniTile = (uni) => {
+  const div = document.createElement("div");
+  div.id = `uni-card-ranked1-${uni.id}`;
+  div.className = "uni-card1";
+
+  const title = document.createElement("h2");
+  title.textContent = uni.name;
+
+  const span = document.createElement("span");
+  span.className = "uni-details";
+  span.textContent = `
+    Website: ${uni.web_pages}
+  `;
+  div.append(title, span);
+  website1.append(div);
+};
+
+const displayUnis = (unis) => {
+  unis.length > 0 ? unis.forEach((uni) => makeUniTile(uni)) : returnNone();
+};
+const fetchUniversities = () => {
+  console.log("1");
+  fetch("http://localhost:3000/universities")
+    .then((resp) => resp.json())
+    .then((unis) => displayUnis(unis))
+    .catch(handleErrorDisplay);
+  console.log("3");
+  console.log("5");
+  console.log("7");
+};
+
+const handlePageLoaded = () => {
+  fetchUniversities();
+  // University dropdown
+  searchInput.addEventListener("change", handleChange);
+};
+
+document.addEventListener("DOMContentLoaded", handlePageLoaded);
