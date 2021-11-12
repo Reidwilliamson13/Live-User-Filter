@@ -15,8 +15,91 @@
     <h1>Univerity Chooser Tool</h1>
     <div>id="title-section"></div>
 
-    <div>
-      class="header-section" id="primary-search">
+<!-- Beginning of main Choosing box with categories to choose from with dropdowns and university selector-->
+
+<div class="container">
+  <h2>Video Category</h2>
+
+  <div class="selected">
+    Select Video Category
+</div>
+
+<div class="select-box">
+  <div class="options-container">
+    <div class="option">
+    <input 
+    type="radio"
+    class="radio" 
+    id="automobiles"
+    name="category"
+    />
+<label for="automobiles">Automobiles</label>
+</div>
+
+<!-- (there should be 5 categories for each card; 6 including
+the school name that gets selected in this first section)-->
+
+<!-- CATEGORY 1 Drop down-->
+<div class="option">
+    <input 
+    type="radio"
+    class="radio" 
+    id="automobiles"
+    name="category"
+    />
+<label for="film">film and animation</label>
+</div>
+
+<!-- CATEGORY 2 Drop down-->
+<div class="option">
+    <input 
+    type="radio"
+    class="radio" 
+    id="science"
+    name="category"
+    />
+<label for="science">science and technology</label>
+</div>
+
+<!-- CATEGORY 3 Drop down-->
+<div class="option">
+    <input 
+    type="radio"
+    class="radio" 
+    id="art"
+    name="category"
+    />
+<label for="art">Art</label>
+</div>
+<div class="option">
+    <input 
+    type="radio"
+    class="radio" 
+    id="travel"
+    name="category"
+    />
+<label for="travel">travel and events</label>
+</div>
+<div class="option">
+    <input 
+    type="radio"
+    class="radio" 
+    id="sports"
+    name="category"
+    />
+<label for="sports">sports</label>
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+<!-- original html for header chooser-->
+    <!-- <div>
+      class="container" id="primary-search">
       <input
         type="text"
         id="school-search-input"
@@ -64,7 +147,10 @@
         placeholder="-"
       />
       </ul>
-    </div>
+    </div> -->
+
+
+<!-- Beginning of populated school/info based on where the user ranks (1st, 2nd, 3rd)-->
 
     <div>
       class="section" id="ranked1">
@@ -123,6 +209,11 @@
         id="college-website3">
       </ul>
     </div>
+
+    
+    <!-- Notes section that I want to line up next to each ranked school, giving the user option to make notes next to that particular school -->
+
+
     <div>
       class="section" id="ranked-notes1">
       <h3>Notes</h3>

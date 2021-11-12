@@ -28,7 +28,7 @@ const safety3 = document.querySelector("#safety3");
 const classSize3 = document.querySelector("#class-size3");
 const hrsFromHome3 = document.querySelector("#hours-from-home3");
 const website3 = document.querySelector("#college-website3");
-
+let unisArray = [];
 const handleErrorDisplay = (error) => {
   messagebanner.classList.add("alert");
   messagebanner.textContent = error;
@@ -39,7 +39,32 @@ const handleErrorDisplay = (error) => {
   }, 5000);
 };
 
-const returnNone = () => {};
+const handleChange = (e) => {
+  const search = e.target.value;
+  const selectedUnis = unisArray.filter((uni) =>
+    uni.name.toLowerCase().startsWith(search.toLowerCase())
+  );
+  if (selectedUnis.length === 0) {
+    returnNone();
+  } else {
+    selectedUnis.forEach(makeUniTile);
+  }
+  searchInput.value = "";
+};
+
+const returnNone = () => {
+  const div = document.createElement("div");
+  div.className = "card alert-warning";
+
+  const icon = document.createElement("h1");
+  icon.textContent = "NOpe";
+
+  const header = document.createElement("h3");
+  header.textContent = "No university found";
+
+  div.append(icon, header);
+  collegeTown1.append(div);
+};
 // Creating 3 ranked cards for populated university, safety, class size, etc.
 const makeUniTile = (uni) => {
   const div = document.createElement("div");
@@ -59,17 +84,14 @@ const makeUniTile = (uni) => {
 };
 
 const displayUnis = (unis) => {
+  unisArray = unis;
   unis.length > 0 ? unis.forEach((uni) => makeUniTile(uni)) : returnNone();
 };
 const fetchUniversities = () => {
-  console.log("1");
   fetch("http://localhost:3000/universities")
     .then((resp) => resp.json())
     .then((unis) => displayUnis(unis))
     .catch(handleErrorDisplay);
-  console.log("3");
-  console.log("5");
-  console.log("7");
 };
 
 const handlePageLoaded = () => {
