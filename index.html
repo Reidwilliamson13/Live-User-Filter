@@ -5,9 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="index.css" />
-    <script>
-      scr = "index.js";
-    </script>
     <title>Univerity Choosing</title>
   </head>
   <body>
@@ -15,16 +12,13 @@
     <h1>Univerity Chooser Tool</h1>
     <div>id="title-section"></div>
 
-<!-- Beginning of main Choosing box with categories to choose from with dropdowns and university selector-->
+<!-- Main Choosing box with chooseable categories with university selecter-->
 
 <div class="container">
-  <h2>Video Category</h2>
-
-  <div class="selected">
-    Select Video Category
-</div>
+  <h2>School Category</h2>
 
 <div class="select-box">
+   
   <div class="options-container">
     <div class="option">
     <input 
@@ -44,10 +38,10 @@ the school name that gets selected in this first section)-->
     <input 
     type="radio"
     class="radio" 
-    id="automobiles"
+    id="college-town"
     name="category"
     />
-<label for="film">film and animation</label>
+<label for="college town">college town</label>
 </div>
 
 <!-- CATEGORY 2 Drop down-->
@@ -55,10 +49,10 @@ the school name that gets selected in this first section)-->
     <input 
     type="radio"
     class="radio" 
-    id="science"
+    id="safety"
     name="category"
     />
-<label for="science">science and technology</label>
+<label for="safety">safety</label>
 </div>
 
 <!-- CATEGORY 3 Drop down-->
@@ -66,29 +60,37 @@ the school name that gets selected in this first section)-->
     <input 
     type="radio"
     class="radio" 
-    id="art"
+    id="class-size"
     name="category"
     />
-<label for="art">Art</label>
+<label for="class size">class size</label>
 </div>
+
+<!-- CATEGORY 4 Drop down-->
 <div class="option">
     <input 
     type="radio"
     class="radio" 
-    id="travel"
+    id="From-home"
     name="category"
     />
-<label for="travel">travel and events</label>
+<label for="hours from home">hours from home</label>
 </div>
+
+<!-- CATEGORY 5 Drop down-->
 <div class="option">
     <input 
     type="radio"
     class="radio" 
-    id="sports"
+    id="Uni-website"
     name="category"
     />
-<label for="sports">sports</label>
+<label for="website">website</label>
 </div>
+</div>
+
+<div class="selected">
+    Select School Category
 </div>
 </div>
 </div>
@@ -232,5 +234,8 @@ the school name that gets selected in this first section)-->
       <footer class="branding"></footer>
       <small>&copy; 2021 <strong>UniversityArchive</strong></small>
     </footer>
+    <script>
+      scr = "index.js";
+    </script>
   </body>
 </html>
