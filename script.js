@@ -1,6 +1,8 @@
 const result = document.getElementById("result");
 const filter = document.getElementById("filter");
 const listItems = [];
+const bottomContent = document.getElementById("content");
+const showMoreBox = document.getElementById("show-more");
 
 getData();
 
@@ -39,3 +41,17 @@ function filterData(searchTerm) {
     }
   });
 }
+
+// On click show-more functionality //
+
+showMoreBox.onClick = function () {
+  if (bottomContent.className == "open") {
+    // shrink the box //
+    bottomContent.className = "";
+    showMoreBox.innerHTML = "SHOW MORE";
+  } else {
+    // expand the box //
+    bottomContent.className = "open";
+    showMoreBox.innerHTML = "SHOW LESS";
+  }
+};

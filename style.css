@@ -16,14 +16,22 @@ body {
 }
 
 .container {
-  border-radius: 5px;
+  border-radius: 0px;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   width: 300px;
+  position: absolute;
+  top: 0em;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  text-align: center;
 }
 
 .title {
   margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 1rem;
 }
 
 .subtitle {
@@ -112,7 +120,7 @@ user-list li {
   margin: 0;
   text-align: center;
 
-  max-height: 270px;
+  max-height: 200px;
   overflow: hidden;
 
   /* Set transitions up */
@@ -120,7 +128,7 @@ user-list li {
   -moz-transition: max-height 0.7s;
   transition: max-height 0.7s;
 }
-
+/* Class of 'open' when user clicks to open should expand */
 #content.open {
   max-height: 1000px;
 
