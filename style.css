@@ -96,7 +96,7 @@ user-list li {
 /* Show more box open and close */
 
 #content {
-  width: 700px;
+  width: 600px;
   background: #fff;
   padding: 20px;
   padding-top: 0;
@@ -104,7 +104,48 @@ user-list li {
   font-size: 13px;
   color: #444;
   margin: 0 auto;
+  margin-top: 6em;
+  position: absolute;
+  top: 45em;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  text-align: center;
 
   max-height: 270px;
   overflow: hidden;
+
+  /* Set transitions up */
+  -webkit-transition: max-height 0.7s;
+  -moz-transition: max-height 0.7s;
+  transition: max-height 0.7s;
+}
+
+#content.open {
+  max-height: 1000px;
+
+  /* Set transitions up */
+  -webkit-transition: max-height 0.7s;
+  -moz-transition: max-height 0.7s;
+  transition: max-height 0.7s;
+}
+
+#show-more {
+  background: #1594e5;
+  color: #fff;
+  font-family: calibri;
+  display: block;
+  width: 140px;
+  font-size: 24px;
+  text-transform: uppercase;
+  padding: 10px;
+  text-align: center;
+  margin: 20px auto;
+  cursor: pointer;
+  position: absolute;
+  top: 27em;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  text-align: center;
 }
