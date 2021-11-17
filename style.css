@@ -92,3 +92,11 @@ user-list li {
 .user-list li.hide {
   display: none;
 }
+
+/* Show more box open and close */
+
+#content {
+  width: 700px;
+  background: #fff;
+  padding: 20px;
+}
